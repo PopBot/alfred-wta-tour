@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.popbot.alfred-wta-tour</string>
+	<key>connections</key>
+	<dict>
+		<key>F1A0008B-93B9-42C3-B1D6-F7C8EA595201</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A3B67A54-A596-4373-BE41-210D659C8202</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>PopBot</string>
+	<key>description</key>
+	<string>Women's Hologic WTA Tour live &amp; daily match scores, PIF WTA Singles/Doubles Rankings, full-season tournament calendar, draws, and player 2026 Service/Return stats.</string>
+	<key>name</key>
+	<string>WTA Tour</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>wta</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>🎾 Loading WTA Tour…</string>
+				<key>script</key>
+				<string>python3 wta.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Scores · wtar rankings · wtas calendar · wtat draw · wtap player stats</string>
+				<key>title</key>
+				<string>WTA Tour</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>F1A0008B-93B9-42C3-B1D6-F7C8EA595201</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>A3B67A54-A596-4373-BE41-210D659C8202</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>## 🎾 WTA Tour — Alfred 5 Workflow
+
+### Triggers (`wta`)
+| Type this | What you get |
+|-----------|-------------|
+| `wta` | Current WTA Tour match scores (Live → Today Upcoming/Final → Recent Main Draw, Singles default) |
+| `wta {filter}` | Filter scoreboard: `wta sabalenka`, `wta hong kong`, `wta live`, `wta doubles`, `wta qual`, `wta all` |
+| `wtar` | Official PIF WTA Singles Rankings (Top 50 default) |
+| `wtar {query}` | Filter rankings: `wtar doubles`, `wtar top10`, `wtar all` (Top 150), `wtar usa`, `wtar cze`, `wtar swiatek` |
+| `wtas` | Full-Season Hologic WTA Tour &amp; Grand Slam Calendar (Active → Upcoming → Completed) |
+| `wtas {query}` | Filter calendar: `wtas slam`, `wtas 1000`, `wtas 500`, `wtas 250`, `wtas 125`, `wtas clay`, `wtas {city/month}` |
+| `wtat` / `wtat {query}` | Full Round-by-Round Tournament Draw (`Final` → `SF` → `QF` → `R16` → `R32`), `wtat doubles` |
+| `wtap {player}` | Unified Player Profile (Rank, YTD &amp; Career W-L/Titles/Prize, `⌘` Serve Stats, `⌥` Return Stats) + Recent Matches |
+</string>
+	<key>uidata</key>
+	<dict>
+		<key>F1A0008B-93B9-42C3-B1D6-F7C8EA595201</key>
+		<dict>
+			<key>xpos</key>
+			<real>140.0</real>
+			<key>ypos</key>
+			<real>110.0</real>
+		</dict>
+		<key>A3B67A54-A596-4373-BE41-210D659C8202</key>
+		<dict>
+			<key>xpos</key>
+			<real>490.0</real>
+			<key>ypos</key>
+			<real>110.0</real>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/PopBot/alfred-wta-tour</string>
+</dict>
+</plist>
